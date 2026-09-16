@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L-Program Coder / Decoder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+<body>
+  <div class="app">
+    <h1>L-Program Coder / Decoder</h1>
+    <p class="subtitle">Encode an L-program to its G&ouml;del number, or decode a number back to a program</p>
+
+    <div class="tabs">
+      <button id="tab-encode">Encode</button>
+      <button id="tab-decode">Decode</button>
+    </div>
+
+    <div class="section" id="encode-section">
+      <div id="instructions-container"></div>
+
+      <div style="display: flex; gap: 8px;">
+        <button class="primary" id="add-btn">add instruction</button>
+        <button class="primary" id="encode-btn">encode program</button>
+      </div>
+
+      <div class="output" id="encode-output" hidden></div>
+    </div>
+
+    <div class="section" id="decode-section" hidden>
+      <div>
+        <label for="decode-input">enter #P (a non-negative integer)</label>
+        <input id="decode-input" placeholder="e.g. 46" />
+      </div>
+      <p class="hint">note: large numbers may take a long time or crash, especially if q+1 is prime</p>
+      <button class="primary" id="decode-btn">decode</button>
+      <p class="error-text" id="decode-error" hidden></p>
+
+      <div class="output" id="decode-output" hidden></div>
+    </div>
+
+    <div class="footer">
+      Built by: Lars Ponikvar<br />
+      For: Professor Ronald W. Fechter
+    </div>
+  </div>
+
+  <script type="py" src="./main.py" config="./pyscript.toml"></script>
+</body>
+</html>

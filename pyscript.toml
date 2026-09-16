@@ -1,0 +1,12 @@
+[[fetch]]
+files = [
+    "./lib/__init__.py",
+    "./lib/primes.py",
+    "./lib/pairing_func.py",
+    "./lib/godel.py",
+    "./lib/labels.py",
+    "./lib/variables.py",
+    "./lib/types.py",
+    "./lib/encoder.py",
+    "./lib/decoder.py",
+]
